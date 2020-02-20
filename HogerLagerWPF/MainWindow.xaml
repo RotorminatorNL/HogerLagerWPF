@@ -35,8 +35,8 @@
         <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="75" Margin="0,100,0,0" Content="Welkom bij HogerLager!"></Label>
 
         <!-- Getal input -->
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35" Margin="0,0,0,260" Content="Vul hieronder je getal in"/>
-        <TextBox Name="txtGuesss" FontSize="30" Padding="0,3,0,0" TextAlignment="Center" Width="500" Height="50" Margin="0,0,0,150" BorderThickness="1" BorderBrush="Black" KeyDown="txtGuesss_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35" Margin="0,0,0,300" Content="Vul hieronder je getal in"/>
+        <TextBox Name="txtGuesss" FontSize="30" Padding="0,3,0,0" TextAlignment="Center" Width="500" Height="50" Margin="0,0,0,180" BorderThickness="1" BorderBrush="Black" KeyDown="txtGuesss_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
 
         <!-- De gok -->
         <Label Name="lblGuess" Content="" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="500" Height="100" Margin="0,200,0,0"/>
