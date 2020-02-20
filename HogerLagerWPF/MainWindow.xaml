@@ -21,7 +21,7 @@
         </Border>
 
         <!-- Scoreboard -->
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="500" Margin="25,150,0,0" BorderThickness="1" BorderBrush="Gray">
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="500" Margin="50,150,0,0" BorderThickness="1" BorderBrush="Gray">
             <Canvas>
                 <Label Content="Scoreboard" FontSize="28" Width="400" Height="50"  BorderThickness="0,0,0,1" BorderBrush="Gray"/>
                 <TextBlock Name="txbPoging" FontSize="20" Width="360" Height="30" Margin="20,70,0,0" Text="Hoeveelheid pogingen:"/>
@@ -35,8 +35,8 @@
         <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="75" Margin="0,100,0,0" Content="Welkom bij HogerLager!"></Label>
 
         <!-- Getal input -->
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35" Margin="0,0,0,300" Content="Vul hieronder je getal in"/>
-        <TextBox Name="txtGuesss" FontSize="30" Padding="0,3,0,0" TextAlignment="Center" Width="500" Height="50" Margin="0,0,0,180" BorderThickness="1" BorderBrush="Black" KeyDown="txtGuesss_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35" Margin="0,0,0,400" Content="Vul hieronder je getal in"/>
+        <TextBox Name="txtGuesss" FontSize="30" Padding="0,3,0,0" TextAlignment="Center" Width="500" Height="50" Margin="0,0,0,280" BorderThickness="1" BorderBrush="Black" KeyDown="txtGuesss_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
 
         <!-- De gok -->
         <Label Name="lblGuess" Content="" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="500" Height="100" Margin="0,200,0,0"/>
