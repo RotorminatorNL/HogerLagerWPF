@@ -1,0 +1,47 @@
+﻿<Window x:Class="HogerLagerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HogerLagerWPF"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <!-- Close button -->
+        <Border Name="BtnClose" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Red" MouseLeftButtonUp="BtnClose_MouseLeftButtonUp" MouseEnter="BtnClose_MouseEnter" MouseLeave="BtnClose_MouseLeave">
+            <TextBlock Text="X" Margin="0,0,0,2" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+        </Border>
+
+        <!-- Minimize button -->
+        <Border Name="BtnMinimize" Margin="0,0,75,0" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Background="White"  MouseLeftButtonUp="BtnMinimize_MouseLeftButtonUp" MouseEnter="BtnMinimize_MouseEnter" MouseLeave="BtnMinimize_MouseLeave">
+            <TextBlock Name="txtMinimize" Text="-" Margin="0,-11,0,0" FontSize="36" Height="40" Width="75" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="LightGray" />
+        </Border>
+
+        <!-- Scoreboard -->
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="500" Margin="25,150,0,0" BorderThickness="1" BorderBrush="Gray">
+            <Canvas>
+                <Label Content="Scoreboard" FontSize="28" Width="400" Height="50"  BorderThickness="0,0,0,1" BorderBrush="Gray"/>
+                <TextBlock Name="txbPoging" FontSize="20" Width="360" Height="30" Margin="20,70,0,0" Text="Hoeveelheid pogingen:"/>
+                <TextBlock Name="txbPoints" FontSize="20" Width="360" Height="30" Margin="20,105,0,0" Text="Punten: "/>
+                <TextBlock Name="txbBestGuess" FontSize="20" Width="360" Height="30" Margin="20,140,0,0" Text="Beste poging: "/>
+                <TextBlock Name="txbAvgGuesses" FontSize="20" Width="360" Height="30" Margin="20,175,0,0" Text="Gemiddeld aantal pogingen: "/>
+            </Canvas>
+        </Border>
+
+        <!-- Title -->
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="75" Margin="0,100,0,0" Content="Welkom bij HogerLager!"></Label>
+
+        <!-- Getal input -->
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35" Margin="0,0,0,260" Content="Vul hieronder je getal in"/>
+        <TextBox Name="txtGuesss" FontSize="30" Padding="0,3,0,0" TextAlignment="Center" Width="500" Height="50" Margin="0,0,0,150" BorderThickness="1" BorderBrush="Black" KeyDown="txtGuesss_KeyDown" PreviewTextInput="NumberValidationTextBox"/>
+
+        <!-- De gok -->
+        <Label Name="lblGuess" Content="" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="500" Height="100" Margin="0,200,0,0"/>
+
+        <!-- Hoger of Lager weergave -->
+        <Label Name="lblHogerLager" Content="Probeer maar!" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="500" Height="100" Margin="0,400,0,0"/>
+    </Grid>
+</Window>
