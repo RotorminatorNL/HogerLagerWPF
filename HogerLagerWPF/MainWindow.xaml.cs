@@ -17,7 +17,7 @@ namespace HogerLagerWPF
         int countPoging;
         int points;
         int bestGuess = 0;
-        int totalGuesses = 0;
+        float totalGuesses = 0;
 
         Random rnd = new Random();
         int rndNumber;
@@ -80,13 +80,13 @@ namespace HogerLagerWPF
 
             if (e.Key == Key.Return && guess != 0)
             {
-                // Add 1 to guesses
+                // Add 1 to guesses to current game
                 countPoging++;
 
                 // Show the guess
                 lblGuess.Content = "Jouw gok: " + guess;
 
-                // Show quantity of quesses
+                // Show quantity of quesses of the current game
                 txbPoging.Text = "Hoeveelheid pogingen: " + countPoging;
 
                 if (guess > rndNumber)
@@ -116,7 +116,7 @@ namespace HogerLagerWPF
 
                     txbBestGuess.Text = "Beste poging: " + bestGuess;
 
-                    // Average quantity of guesses
+                    // Get quantity of guesses
                     if (totalGuesses == 0)
                     {
                         totalGuesses = countPoging;
@@ -126,13 +126,16 @@ namespace HogerLagerWPF
                         totalGuesses = totalGuesses + countPoging;
                     }
 
-                    txbAvgGuesses.Text = "Gemiddeld aantal pogingen: " + (totalGuesses / points);
+                    // Calculate average quantity of guesses
+                    float avgGuess = totalGuesses / points;
+
+                    txbAvgGuesses.Text = "Gemiddeld aantal pogingen: " + Math.Round(avgGuess, 0) + " ("+ Math.Round(avgGuess, 1) + ")";
 
                     // Quantity of guesses reset
                     countPoging = 0;
                     txbPoging.Text = "Hoeveelheid pogingen: " + countPoging;
 
-                    // Get new rnd number
+                    // Get new rnd number (start new game)
                     rndNumber = rnd.Next(0, 1000);
                 }
 

@@ -21,13 +21,18 @@
         </Border>
 
         <!-- Scoreboard -->
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="500" Margin="50,150,0,0" BorderThickness="1" BorderBrush="Gray">
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="500" Margin="50,150,0,0" BorderThickness="1" BorderBrush="Gray" CornerRadius="10">
             <Canvas>
-                <Label Content="Scoreboard" FontSize="28" Width="400" Height="50"  BorderThickness="0,0,0,1" BorderBrush="Gray"/>
+                <Label Content="Scoreboard" FontSize="28" Width="400" Height="50" Padding="10,5,0,0" BorderThickness="0,0,0,1" BorderBrush="Gray"/>
                 <TextBlock Name="txbPoging" FontSize="20" Width="360" Height="30" Margin="20,70,0,0" Text="Hoeveelheid pogingen:"/>
                 <TextBlock Name="txbPoints" FontSize="20" Width="360" Height="30" Margin="20,105,0,0" Text="Punten: "/>
                 <TextBlock Name="txbBestGuess" FontSize="20" Width="360" Height="30" Margin="20,140,0,0" Text="Beste poging: "/>
                 <TextBlock Name="txbAvgGuesses" FontSize="20" Width="360" Height="30" Margin="20,175,0,0" Text="Gemiddeld aantal pogingen: "/>
+                <Border Width="350" Height="200" Margin="25,275,0,0" BorderThickness="1" BorderBrush="Gray" CornerRadius="5,5,0,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto">
+                        <Label Width="200" Content="Statistieken" FontSize="25" Height="50" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </ScrollViewer>
+                </Border>
             </Canvas>
         </Border>
 
